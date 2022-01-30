@@ -7,7 +7,12 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: Azure Pipelines
+  vmImage: windows-latest
+  demands:
+  - msbuild
+  - visualstudio
+  - vstest
 
 steps:
 - script: echo Hello, world!
